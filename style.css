@@ -1,0 +1,656 @@
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#02030d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+section{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:50px 25px;
+    position:relative;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:2rem;
+}
+
+p{
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+/* =========================================
+   STAR BACKGROUND
+========================================= */
+
+#stars,
+#stars2,
+#stars3{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-3;
+}
+
+#stars{
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+    background-size:45px 45px;
+    animation:moveStars 180s linear infinite;
+    opacity:.4;
+}
+
+#stars2{
+    background-image:
+    radial-gradient(#ffb3d9 1px,transparent 1px);
+    background-size:80px 80px;
+    animation:moveStars 260s linear infinite;
+    opacity:.25;
+}
+
+#stars3{
+    background-image:
+    radial-gradient(#87cefa 2px,transparent 2px);
+    background-size:120px 120px;
+    animation:moveStars 320s linear infinite;
+    opacity:.2;
+}
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-1000px);
+    }
+
+}
+
+/* =========================================
+   INTRO
+========================================= */
+
+#intro{
+    background:
+    radial-gradient(circle,#13214d,#02030d);
+}
+
+.intro-content{
+    animation:fadeIn 2s ease;
+}
+
+.smallText{
+    font-size:1.4rem;
+    opacity:.9;
+}
+
+.universe{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    color:#ff80bf;
+    margin:25px 0;
+    text-shadow:
+    0 0 15px #ff4da6,
+    0 0 30px #ff80bf;
+}
+
+.tapText{
+    margin-top:50px;
+    animation:blink 1.2s infinite;
+}
+
+/* =========================================
+   TITLE PAGE
+========================================= */
+
+#titlePage{
+    background:
+    linear-gradient(180deg,#000814,#001d3d);
+}
+
+#typing{
+    font-size:4rem;
+    color:#ffd166;
+    font-family:'Cinzel',serif;
+    min-height:80px;
+}
+
+.subtitle{
+    margin-top:30px;
+    max-width:700px;
+    opacity:.85;
+}
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+#loginPage{
+    background:
+    radial-gradient(circle,#111,#000);
+}
+
+.loginBox{
+    width:90%;
+    max-width:450px;
+    padding:45px;
+    border-radius:25px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+    0 0 25px rgba(255,105,180,.2);
+}
+
+.loginBox h2{
+    margin-bottom:15px;
+}
+
+.loginBox p{
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:1rem;
+    text-align:center;
+}
+
+#wrongPass{
+    margin-top:20px;
+    color:#ff5d5d;
+    min-height:20px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button{
+    padding:14px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    color:white;
+    background:
+    linear-gradient(45deg,#ff4da6,#ff6b81);
+    font-size:1rem;
+    transition:.4s;
+    box-shadow:
+    0 0 20px rgba(255,77,166,.35);
+}
+
+button:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.05);
+
+    box-shadow:
+    0 0 35px
+    rgba(255,77,166,.6);
+
+}
+
+/* =========================================
+   ACCESS GRANTED
+========================================= */
+
+#granted{
+    background:
+    radial-gradient(circle,#003300,#001100);
+}
+
+#granted h1{
+    color:#76ff7a;
+    text-shadow:
+    0 0 15px lime;
+}
+
+/* =========================================
+   CHEMISTRY
+========================================= */
+
+#chemistry{
+    background:
+    linear-gradient(#041a29,#01050d);
+}
+
+.labCard{
+    margin:35px 0;
+    padding:30px;
+    width:90%;
+    max-width:600px;
+    border-radius:20px;
+    background:
+    rgba(255,255,255,.05);
+    border:
+    1px solid rgba(255,255,255,.15);
+}
+
+.labCard p{
+    margin:15px 0;
+}
+
+.story{
+    max-width:700px;
+}
+
+.story p{
+    margin:18px 0;
+    font-size:1.15rem;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:.2;
+    }
+
+}
+
+/* =========================================
+   MEMORY GALLERY
+========================================= */
+
+#gallery{
+    background:
+    linear-gradient(180deg,#081420,#02030d);
+}
+
+.sectionTitle{
+    font-size:3rem;
+    margin-bottom:15px;
+    color:#ffd6e7;
+}
+
+.sectionSubtitle{
+    max-width:700px;
+    margin-bottom:50px;
+    opacity:.85;
+}
+
+.galleryContainer{
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.photoCard{
+    background:rgba(255,255,255,.06);
+    border-radius:20px;
+    overflow:hidden;
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.12);
+    transition:.4s;
+    box-shadow:
+    0 0 20px rgba(255,105,180,.12);
+}
+
+.photoCard:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 35px rgba(255,105,180,.4);
+}
+
+.photoCard img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+}
+
+.caption{
+    padding:18px;
+    font-size:1rem;
+    color:#fff;
+}
+
+/* =========================================
+   RELATIONSHIP TIMER
+========================================= */
+
+#timerSection{
+    background:
+    radial-gradient(circle,#111833,#05070d);
+}
+
+#loveTimer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:50px;
+}
+
+.timeBox{
+    width:150px;
+    height:150px;
+    border-radius:25px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.12);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.35s;
+}
+
+.timeBox:hover{
+    transform:scale(1.08);
+}
+
+.timeBox span{
+    font-size:3rem;
+    font-weight:bold;
+    color:#ff8dc2;
+}
+
+.timeBox small{
+    margin-top:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* =========================================
+   LOVE LETTERS
+========================================= */
+
+#letters{
+    background:
+    linear-gradient(180deg,#1b0a16,#05050b);
+}
+
+.letterGrid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+    width:100%;
+    max-width:900px;
+}
+
+.letter{
+    padding:35px;
+    border-radius:20px;
+    cursor:pointer;
+    background:
+    linear-gradient(135deg,
+    rgba(255,182,193,.15),
+    rgba(255,255,255,.05));
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.4s;
+
+    font-size:1.2rem;
+}
+
+.letter:hover{
+    transform:
+    rotate(-2deg)
+    scale(1.05);
+
+    box-shadow:
+    0 0 25px rgba(255,105,180,.4);
+}
+
+/* =========================================
+   APOLOGY SECTION
+========================================= */
+
+#sorrySection{
+    background:
+    linear-gradient(#0b0b18,#02030d);
+}
+
+.sorryText{
+    max-width:850px;
+    white-space:pre-line;
+    line-height:2;
+    font-size:1.15rem;
+    background:rgba(255,255,255,.05);
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+/* =========================================
+   FIREWORKS
+========================================= */
+
+#fireworksSection{
+    overflow:hidden;
+    background:black;
+    position:relative;
+}
+
+#fireworksCanvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+
+.fireworkText{
+    position:relative;
+    z-index:5;
+}
+
+.fireworkText h1{
+    font-size:4rem;
+    color:#ffd166;
+    text-shadow:
+    0 0 20px gold;
+}
+
+.fireworkText h2{
+    margin-top:25px;
+    line-height:1.8;
+}
+
+/* =========================================
+   FUTURE
+========================================= */
+
+#future{
+    background:
+    linear-gradient(#0b132b,#02030d);
+}
+
+#future p{
+    max-width:750px;
+    line-height:2;
+    white-space:pre-line;
+    font-size:1.15rem;
+}
+
+/* =========================================
+   ENDING
+========================================= */
+
+#ending{
+    background:
+    radial-gradient(circle,#25031a,#02030d);
+}
+
+#ending h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    color:#ff8fc5;
+    text-shadow:
+    0 0 20px #ff4da6;
+}
+
+#ending h2{
+    margin:25px 0;
+}
+
+#ending h3{
+    margin:40px auto;
+    max-width:700px;
+    line-height:2;
+    font-weight:400;
+    white-space:pre-line;
+}
+
+#ending p{
+    max-width:700px;
+    line-height:2;
+    white-space:pre-line;
+}
+
+/* =========================================
+   MUSIC POPUP
+========================================= */
+
+#musicPopup{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    background:rgba(0,0,0,.9);
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+}
+
+#musicPopup h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+#musicPopup p{
+    margin-bottom:30px;
+    max-width:350px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    .universe{
+        font-size:3.5rem;
+    }
+
+    #typing{
+        font-size:2.5rem;
+    }
+
+    .sectionTitle{
+        font-size:2.3rem;
+    }
+
+    .galleryContainer{
+        grid-template-columns:1fr;
+    }
+
+    .photoCard img{
+        height:260px;
+    }
+
+    .timeBox{
+        width:120px;
+        height:120px;
+    }
+
+    .timeBox span{
+        font-size:2.2rem;
+    }
+
+    #ending h1{
+        font-size:3.5rem;
+    }
+
+    .fireworkText h1{
+        font-size:2.7rem;
+    }
+
+    .loginBox{
+        padding:30px 20px;
+    }
+
+    .sorryText{
+        padding:25px;
+        font-size:1rem;
+    }
+
+}
