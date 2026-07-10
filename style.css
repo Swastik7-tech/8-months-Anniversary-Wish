@@ -330,10 +330,13 @@ button:hover{
 .galleryContainer{
     width:100%;
     max-width:1200px;
+    margin:0 auto;
+
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+
+    align-items:start;
 }
 
 .photoCard{
