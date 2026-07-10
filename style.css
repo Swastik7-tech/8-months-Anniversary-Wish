@@ -311,7 +311,8 @@ button:hover{
 ========================================= */
 
 #gallery{
-    background:linear-gradient(180deg,#081420,#02030d);
+    background:
+    linear-gradient(180deg,#081420,#02030d);
 }
 
 .sectionTitle{
@@ -326,88 +327,46 @@ button:hover{
     opacity:.85;
 }
 
-/* Masonry Gallery */
-
 .galleryContainer{
     width:100%;
-    max-width:1300px;
-    margin:auto;
-
-    column-count:3;
-    column-gap:25px;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
 }
 
 .photoCard{
-    display:inline-block;
-    width:100%;
-    margin:0 0 25px;
-
-    break-inside:avoid;
-
     background:rgba(255,255,255,.06);
     border-radius:20px;
     overflow:hidden;
-
     backdrop-filter:blur(12px);
-
     border:1px solid rgba(255,255,255,.12);
-
     transition:.4s;
-
     box-shadow:
     0 0 20px rgba(255,105,180,.12);
 }
 
 .photoCard:hover{
-
     transform:
-    translateY(-8px)
-    scale(1.02);
+    translateY(-10px)
+    scale(1.03);
 
     box-shadow:
     0 0 35px rgba(255,105,180,.4);
-
 }
 
 .photoCard img{
     width:100%;
+    height:320px;
+    object-fit:cover;
     display:block;
-
-    height:auto;
 }
 
 .caption{
     padding:18px;
-    text-align:center;
     font-size:1rem;
-    color:white;
-    line-height:1.5;
-}
-
-/* Mobile */
-
-@media(max-width:1000px){
-
-    .galleryContainer{
-        column-count:2;
-    }
-
-}
-
-@media(max-width:650px){
-
-    .galleryContainer{
-        column-count:1;
-    }
-
-    .sectionTitle{
-        font-size:2.3rem;
-    }
-
-    .sectionSubtitle{
-        font-size:1rem;
-    }
-
+    color:#fff;
 }
 
 /* =========================================
